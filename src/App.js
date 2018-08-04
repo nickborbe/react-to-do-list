@@ -43,6 +43,19 @@ class App extends Component {
     }
   }
 
+    deleteTask(theIdOfTheTask){
+      axios.post(`http://localhost:5000/api/tasks/delete/${theIdOfTheTask}`, {})
+      .then((response)=>{
+        console.log(response);
+        this.getAllTheTasks();
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+
+
+    }
+
 
 
 
