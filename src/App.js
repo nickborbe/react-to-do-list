@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import AddTask from './addTask';
 
 
 class App extends Component {
@@ -39,15 +40,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-     <h1> The Single Greates To-Do List In The History of Human History</h1>
-     <button onClick={()=>{this.getAllTheTasks()}} >
-       Get Tasks
-       </button>
-       {this.showTasks()}
+    <div className="App">
+    <h1> The Single Greatest To-Do List In The History of Human History</h1>
+    
+    <div className="add">
+    <AddTask></AddTask>
+    </div>
+
+      <div className="list">
+      <button onClick={()=>{this.getAllTheTasks()}} >
+        Get Tasks
+        </button>
+        {this.showTasks()}
+        </div>
+
       </div>
     );
   }
 }
+
+
+
+
+
+
 
 export default App;
