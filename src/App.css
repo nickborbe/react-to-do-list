@@ -29,3 +29,8 @@ body{
   justify-content: space-around;
   align-items: baseline;
 }
+
+li{
+  list-style: none;
+}
+
