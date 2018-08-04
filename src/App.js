@@ -49,7 +49,6 @@ class App extends Component {
     </div>
 
       <div className="list">
-        Get Tasks
         {this.showTasks()}
         </div>
 
