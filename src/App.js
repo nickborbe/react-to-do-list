@@ -26,6 +26,10 @@ class App extends Component {
   }
 
   showTasks(){
+    if(this.state.theTasks.length === 0){
+      this.getAllTheTasks();
+    }
+
     return (
       this.state.theTasks.reverse().map(function(task, index){
         return(
@@ -51,7 +55,7 @@ class App extends Component {
       <div className="list">
       <h2> List of Tasks </h2>
         {this.showTasks()}
-        </div>
+      </div>
 
       </div>
     );
