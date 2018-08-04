@@ -78,6 +78,8 @@ class App extends Component {
       <h3>{task.title}</h3>
       <p style={{maxWidth: '400px'}} >{task.description} </p>
       {this.renderForm(index, task._id, task.title, task.description)}
+
+    
       </div>
         ) 
       })
@@ -88,7 +90,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-    <h1> The Single Greatest To-Do List In The History of Human History</h1>
+    <h1 style={{margin: '80px'}}> The Single Greatest To-Do List In The History of Human History</h1>
     
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
@@ -99,8 +101,25 @@ class App extends Component {
         {this.showTasks()}
       </div>
 
+  <div className="footer">
+      <ul> 
+        <h4>Copyright AF</h4>
+        <li> This Page is Beautiful </li>
+        <li> This Page is a strong, self-loving individual </li>
+        </ul>
 
-      </div>
+        <ul>
+      <h4> All Rights Reserved </h4>
+      <li> Property Of React Bindings Corp </li>
+
+      </ul>
+
+      <ul>
+        <h4> External Resources </h4>
+        <li> Check our the Docs </li>
+      </ul>
+  </div>
+  </div>
     );
   }
 }

@@ -1,26 +1,31 @@
-.App{
-  margin: 0 80px;
-}
-
 .grn-btn{
   width: 300px;
   background-color: greenyellow;
   padding: 20px;
   font-size: 25px;
+  margin: 5px;
+}
+
+body{
+  background-color: #f8f4f9;
 }
 
 .list{
   float: left;
+  margin-left: 80px;
 }
 
 .add{
   float: right;
+  margin-right: 80px;
 }
 
 
-/* .footer{
+.footer{
   background-color: #c242f4;
-  height: 100px;
-  position: fixed;
-  bottom: 50px;
-} */
+  min-height: 100px;
+  clear: both;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
