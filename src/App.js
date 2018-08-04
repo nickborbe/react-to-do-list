@@ -47,6 +47,7 @@ class App extends Component {
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
     </div>
+    <h2> List of Tasks </h2>
 
       <div className="list">
         {this.showTasks()}
