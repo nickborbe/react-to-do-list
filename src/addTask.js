@@ -52,7 +52,7 @@ class AddTask extends Component {
         <label> Description </label>
         <input value={this.state.descInput}  onChange={(e)=>{this.updateDescription(e)}} type="text"/> 
   
-        <button onClick={()=>{this.addTask()}} > Submit New Task </button>
+        <button className="grn-btn" onClick={()=>{this.addTask()}} > Submit New Task </button>
   
       </div>
       )
