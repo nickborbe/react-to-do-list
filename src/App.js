@@ -13,12 +13,7 @@ class App extends Component {
     }
   }
 
-  // addOneTask(taskToAdd){
-  //   console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-')
-  //   // const currentArray = this.state.theTasks.slice();
-  //   // currentArray.push(taskToAdd)
-  //   // this.setState({theTasks: currentArray});
-  // }
+ 
 
   getAllTheTasks(){
     axios.get("http://localhost:5000/api/tasks")
