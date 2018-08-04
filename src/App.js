@@ -13,7 +13,6 @@ class App extends Component {
     }
   }
 
- 
 
   getAllTheTasks(){
     axios.get("http://localhost:5000/api/tasks")
@@ -50,9 +49,7 @@ class App extends Component {
     </div>
 
       <div className="list">
-      <button onClick={()=>{this.getAllTheTasks()}} >
         Get Tasks
-        </button>
         {this.showTasks()}
         </div>
 
