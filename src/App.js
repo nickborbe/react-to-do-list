@@ -63,6 +63,7 @@ class App extends Component {
     if(this.state.theTasks.length === 0){
       this.getAllTheTasks();
     }
+    // want to find a better way to address this ^
     
 
     return (
