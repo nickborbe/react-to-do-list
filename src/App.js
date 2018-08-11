@@ -145,7 +145,7 @@ class App extends Component {
 
         <ul>
       <h4> All Rights Reserved </h4>
-      <li> Property Of React Bindings Corp </li>
+      <li> Property of me cause I chill and you don't even know how to chill </li>
 
       </ul>
 
