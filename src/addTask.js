@@ -14,7 +14,7 @@ class AddTask extends Component {
 
     addTask(){
 
-        axios.post("http://localhost:5000/api/tasks/create",{title: this.state.titleInput,description: this.state.descInput})
+        axios.post("http://localhost:5000/api/tasks/create",{title: this.state.titleInput,description: this.state.descInput}, {withCredentials: true})
         .then((res)=>{
             console.log(res)
             this.props.blah();
