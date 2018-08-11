@@ -35,10 +35,21 @@ class User extends Component {
                 usernameInput: this.state.usernameInput,
                 passwordInput: this.state.passwordInput,
                 loggedInUser:  response.data,
-            })
-           
+            }) 
         })
+    }
 
+    signup(){
+        const username = this.state.usernameInput;
+        const password = this.state.passwordInput;
+        axios.post(`http://localhost:5000/api/signup`, {username, password }, {withCredentials: true})
+        .then((response)=>{
+            this.setState({
+                usernameInput: this.state.usernameInput,
+                passwordInput: this.state.passwordInput,
+                loggedInUser:  response.data,
+            }) 
+        })
     }
 
     showUser(){
@@ -56,7 +67,7 @@ class User extends Component {
             <input value = {this.state.passwordInput} onChange={(e)=>{this.updatePassword(e)}} type="password"/>
             
             <button  onClick={()=>{this.login()}} className="little-green-btn" > Log In </button>
-            <button onClick={()=>{this.login()}} className="little-green-btn" > Create New Account </button>
+            <button onClick={()=>{this.signup()}} className="little-green-btn" > Create New Account </button>
             </div>
         )
     }
