@@ -144,24 +144,7 @@ class TodoList extends Component {
         {this.showTasks()}
       </div>
 
-  <div className="footer">
-      <ul> 
-        <h4>Copyright AF</h4>
-        <li> This Page is Beautiful </li>
-        <li> This Page is a strong, self-loving individual </li>
-        </ul>
 
-        <ul>
-      <h4> All Rights Reserved </h4>
-      <li> Property of me cause I chill and you don't even know how to chill </li>
-
-      </ul>
-
-      <ul>
-        <h4> External Resources </h4>
-        <li> Check our the Docs </li>
-      </ul>
-  </div>
   </div>
     );
   }

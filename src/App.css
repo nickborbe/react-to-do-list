@@ -30,6 +30,17 @@ body{
   align-items: baseline;
 }
 
+#theBody{
+  height: 81vh;
+}
+
+.footer ul{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  text-align: center;
+}
+
 li{
   list-style: none;
 }
@@ -39,4 +50,6 @@ li{
   padding: 10px;
   margin: 0 5px;
 }
+
+
 
