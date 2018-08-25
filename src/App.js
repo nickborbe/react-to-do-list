@@ -4,9 +4,6 @@ import { Link, Route } from 'react-router-dom'
 
 import './App.css';
 import axios from 'axios';
-import AddTask from './addTask';
-import EditTask from './editTask'
-import User from './user'
 import TodoList from './todoList'
 
 
@@ -16,6 +13,9 @@ class App extends Component {
     this.state = {
       loggedInUser: null,
     }
+    console.log('re rendering APP JS')
+    console.log(this.state)
+
   }
 
 
@@ -41,11 +41,9 @@ class App extends Component {
 
 
     getUserFromUserComponent = (userObj)=>{
-      console.log("getting user from user component to app", userObj)
       
       this.setState({loggedInUser: userObj});
-      
-      console.log(this.state)
+
   }
 
  
@@ -66,11 +64,12 @@ class App extends Component {
       <div id="theBody">
 
         <nav>
+          <Link to="/">Home</Link>
           <Link to="/todolist">To-Do List</Link>
         </nav>
 
         <div>
-          <Route path="/todolist" component={TodoList}/>
+          <Route path="/todolist" render={()=> <TodoList sendTheUser={this.getUserFromUserComponent} theActualUser={this.state.loggedInUser}/>} />
         </div>
 
 

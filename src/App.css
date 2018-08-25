@@ -34,6 +34,16 @@ body{
   height: 81vh;
 }
 
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 7vh;
+  background-color: lightslategray;
+  padding: 0 5vw;
+}
+
+
 .footer ul{
   display: flex;
   flex-direction: column;

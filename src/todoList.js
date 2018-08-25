@@ -12,39 +12,21 @@ class TodoList extends Component {
     this.state = {
       theTasks: null,
       showing: false,
-      loggedInUser: null,
+      loggedInUser: this.props.theAcutalUser,
     }
+
+    console.log(this.props)
+
+  }
+
+  componentWillReceiveProps(nextProps) {
+      console.log(nextProps["theActualUser"])
+    this.setState({...this.state, loggedInUser: nextProps["theActualUser"]})
+
+    console.log(this.state)
   }
 
 
-  fetchUser(){
-    if( this.state.loggedInUser === null ){  
-        axios.get(`http://localhost:5000/api/loggedin`, {withCredentials: true})
-        .then((response)=>{
-            this.setState({
-                theTasks: this.state.theTasks,
-                showing: this.state.showing,
-                loggedInUser:  response.data,
-           }) 
-        })
-        .catch((err)=>{
-            this.setState({
-              theTasks: this.state.theTasks,
-              showing: this.state.showing,
-                loggedInUser:  false,
-           }) 
-        })
-    }
-}
-
-
-    getUserFromUserComponent = (userObj)=>{
-      console.log("getting user from user component to app", userObj)
-      
-      this.setState({loggedInUser: userObj});
-      
-      console.log(this.state)
-  }
 
   getAllTheTasks(){
     axios.get("http://localhost:5000/api/tasks", {withCredentials: true})
@@ -129,13 +111,12 @@ class TodoList extends Component {
   render() {
     return (
       <div className="App">
-      {this.fetchUser()}
     <h1 style={{margin: '80px'}}> The Single Greatest To-Do List In The History of Human History</h1>
     
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
 
-    <User sendIt={this.getUserFromUserComponent}></User>
+    <User sendIt={this.props.sendTheUser}></User>
 
     </div>
 
