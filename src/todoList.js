@@ -12,7 +12,7 @@ class TodoList extends Component {
     this.state = {
       theTasks: null,
       showing: false,
-      loggedInUser: this.props.theAcutalUser,
+      loggedInUser: this.props.theActualUser,
     }
   }
 

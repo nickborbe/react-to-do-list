@@ -46,6 +46,14 @@ class App extends Component {
 
   }
 
+  showUser(){
+    if(this.state.loggedInUser){
+      return(
+        <span> Welcome, {this.state.loggedInUser.username} </span>
+      )
+    }
+  }
+
  
 
 
@@ -57,6 +65,7 @@ class App extends Component {
 
         <nav>
           <Link to="/">Home</Link>
+          {this.showUser()}
           <Link to="/todolist">To-Do List</Link>
         </nav>
 
