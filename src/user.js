@@ -11,6 +11,15 @@ class User extends Component {
             loggedInUser: null,
         }
     }
+
+
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({...this.state, loggedInUser: nextProps["theActualUser"]})
+        console.log('re rendering to do list component', this.state)
+      }
+    
+
     updatePassword(e){
         this.setState({
             usernameInput: this.state.usernameInput,
@@ -91,20 +100,7 @@ class User extends Component {
     }
 
 
-    showUser(){
-        this.fetchUser();
-        if(this.state.loggedInUser){
-           return (
-        <div>
-            <h3> Welcome, {this.state.loggedInUser.username} </h3>
-            <button onClick={()=>{this.logout()}} className="little-green-btn"> Log Out </button>
-        </div>
-           )
-               
-        }else{
-            return   <h3> User Component </h3>
-        }
-    }
+  
 
     showForm(){
         if(!this.state.loggedInUser){
@@ -127,7 +123,7 @@ class User extends Component {
     render(){
         return(
             <div>
-             {this.showUser()}
+             {/* {this.showUser()} */}
              {this.showForm()}
             </div>
             )

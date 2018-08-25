@@ -49,12 +49,28 @@ class App extends Component {
   showUser(){
     if(this.state.loggedInUser){
       return(
+        <div>
         <span> Welcome, {this.state.loggedInUser.username} </span>
+       <button onClick={()=>{this.logout()}} className="little-green-btn"> Log Out </button>
+
+        </div>
       )
     }
   }
 
- 
+
+
+  logout(){
+    axios.post(`http://localhost:5000/api/logout`, {}, {withCredentials: true})
+    .then((response)=>{
+        this.setState({
+            loggedInUser:  null,
+        }) 
+    })
+
+}
+
+
 
 
   render() {

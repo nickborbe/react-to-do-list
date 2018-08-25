@@ -18,6 +18,7 @@ class TodoList extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({...this.state, loggedInUser: nextProps["theActualUser"]})
+    console.log('re rendering to do list component', this.state)
   }
 
 
@@ -110,7 +111,7 @@ class TodoList extends Component {
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
 
-    <User sendIt={this.props.sendTheUser}></User>
+    <User theActualUser={this.state.loggedInUser} sendIt={this.props.sendTheUser}></User>
 
     </div>
 
