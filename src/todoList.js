@@ -14,16 +14,10 @@ class TodoList extends Component {
       showing: false,
       loggedInUser: this.props.theAcutalUser,
     }
-
-    console.log(this.props)
-
   }
 
   componentWillReceiveProps(nextProps) {
-      console.log(nextProps["theActualUser"])
     this.setState({...this.state, loggedInUser: nextProps["theActualUser"]})
-
-    console.log(this.state)
   }
 
 

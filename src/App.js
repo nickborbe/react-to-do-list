@@ -48,14 +48,6 @@ class App extends Component {
 
  
 
- 
-
-  
-   
-
-
-
-
 
   render() {
     return (
@@ -85,7 +77,7 @@ class App extends Component {
 
         <ul>
       <h4> All Rights Reserved </h4>
-      <li> Property of me cause I chill and you don't even know how to chill </li>
+      <li> Property of me cause I chill and you don't even know what chilling even is.  Do you? No! Didn't think so. </li>
 
       </ul>
 
