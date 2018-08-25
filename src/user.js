@@ -50,6 +50,7 @@ class User extends Component {
                 passwordInput: '',
                 loggedInUser:  response.data,
             }) 
+            this.props.sendIt(response.data)
         })
     }
 
@@ -63,6 +64,7 @@ class User extends Component {
                 passwordInput: '',
                 loggedInUser:  null,
             }) 
+            this.props.sendIt(null);
         })
 
     }
@@ -76,6 +78,7 @@ class User extends Component {
                     passwordInput: this.state.passwordInput,
                     loggedInUser:  response.data,
                }) 
+               this.props.sendIt(response.data)
             })
             .catch((err)=>{
                 this.setState({
