@@ -36,6 +36,7 @@ class User extends Component {
                 passwordInput: '',
                 loggedInUser:  response.data,
             }) 
+            this.props.sendIt(response.data)
         })
     }
 

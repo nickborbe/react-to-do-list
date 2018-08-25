@@ -37,6 +37,15 @@ class App extends Component {
     }
 }
 
+
+    getUserFromUserComponent = (userObj)=>{
+      console.log("getting user from user component to app", userObj)
+      
+      this.setState({loggedInUser: userObj});
+      
+      console.log(this.state)
+  }
+
   getAllTheTasks(){
     axios.get("http://localhost:5000/api/tasks", {withCredentials: true})
     .then((allTheTasks)=>{
@@ -126,7 +135,7 @@ class App extends Component {
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
 
-    <User></User>
+    <User sendIt={this.getUserFromUserComponent}></User>
 
     </div>
 
