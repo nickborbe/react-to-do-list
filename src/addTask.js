@@ -45,12 +45,15 @@ class AddTask extends Component {
     render(){
       return(
       <div className="add-task">
+
         <h3> Add a New Task </h3>
+
         <label> Title </label>
         <input value={this.state.titleInput} onChange={(e)=>{this.updateTitle(e)}} type="text"/> 
   
         <label> Description </label>
         <textarea rows="10" cols="25" value={this.state.descInput}  onChange={(e)=>{this.updateDescription(e)}} type="text"/> 
+        
   
         <button className="grn-btn" onClick={()=>{this.addTask()}} > Submit New Task </button>
   

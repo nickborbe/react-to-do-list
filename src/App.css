@@ -1,14 +1,50 @@
+
 .grn-btn{
   width: 300px;
   background-color: greenyellow;
   padding: 20px;
   font-size: 25px;
   margin: 5px;
+  border-radius: 10px;
+}
+
+.little-green-btn{
+  background-color: greenyellow;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 7px;
 }
 
 body{
   background-color: #f8f4f9;
 }
+
+h1{
+  margin: 80px;
+}
+
+ input{
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 17px;
+}
+
+.add-task input{
+  width: 80%;
+  height: 35px;
+
+}
+
+textarea{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 18px;
+
+}
+
+
 
 .list{
   float: left;
@@ -18,6 +54,7 @@ body{
 .add{
   float: right;
   margin-right: 80px;
+  width: 40%;
 }
 
 
@@ -34,6 +71,16 @@ body{
   height: 81vh;
 }
 
+#loginFormWrapper{
+  position: absolute;
+  right:20px;
+  top: 110px;
+  padding: 30px;
+  border: 2px solid lightslategray;
+  border-radius: 3%;
+  background-color: white;
+}
+
 nav{
   display: flex;
   align-items: center;
@@ -41,6 +88,7 @@ nav{
   height: 90px;
   background-color: lightslategray;
   padding: 0 5vw;
+  margin-bottom: 150px;
 }
 
 nav div{
@@ -63,10 +111,17 @@ li{
   list-style: none;
 }
 
-.little-green-btn{
-  background-color: greenyellow;
-  padding: 10px;
-  margin: 0 5px;
+
+
+.add-task{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-task > *{
+  margin: 3%;
+  text-align: center;
 }
 
 
