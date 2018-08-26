@@ -111,7 +111,6 @@ class TodoList extends Component {
     <div className="add">
     <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
 
-    <User theActualUser={this.state.loggedInUser} sendIt={this.props.sendTheUser}></User>
 
     </div>
 

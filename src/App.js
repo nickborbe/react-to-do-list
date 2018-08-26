@@ -5,6 +5,8 @@ import { Link, Route } from 'react-router-dom'
 import './App.css';
 import axios from 'axios';
 import TodoList from './todoList'
+import User from './user'
+
 
 
 class App extends Component {
@@ -12,6 +14,7 @@ class App extends Component {
     super(props)
     this.state = {
       loggedInUser: null,
+      loginFormShowing: false,
     }
     console.log('re rendering APP JS')
     console.log(this.state)
@@ -41,9 +44,7 @@ class App extends Component {
 
 
     getUserFromUserComponent = (userObj)=>{
-      
-      this.setState({loggedInUser: userObj});
-
+      this.setState({...this.state, loggedInUser: userObj});
   }
 
   showUserElseShowLoginButton(){
@@ -75,6 +76,18 @@ class App extends Component {
     })
 
 }
+
+  showLoginForm(){
+    if(this.state.loginFormShowing){
+
+      return(
+        <div id = "login-signup-form-wrapper">
+        <User theActualUser={this.state.loggedInUser} sendIt={this.getUserFromUserComponent}></User>
+      </div>
+    )
+    
+  }
+  }
 
 
 
