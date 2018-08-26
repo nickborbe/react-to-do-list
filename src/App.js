@@ -59,7 +59,7 @@ class App extends Component {
     }else {
       return(
         <div>
-                 <button onClick={()=>{this.showLoginForm()}} className="little-green-btn"> Log In/Sign Up </button>
+                 <button onClick={()=>{this.toggleLoginForm()}} className="little-green-btn"> Log In/Sign Up </button>
         </div>
       )
     }
@@ -77,11 +77,16 @@ class App extends Component {
 
 }
 
+toggleLoginForm(){
+  console.log("toggling the form")
+  this.setState({...this.state, loginFormShowing: !this.state.loginFormShowing})
+}
+
   showLoginForm(){
     if(this.state.loginFormShowing){
 
       return(
-        <div id = "login-signup-form-wrapper">
+        <div id = "loginFormWrapper">
         <User theActualUser={this.state.loggedInUser} sendIt={this.getUserFromUserComponent}></User>
       </div>
     )
@@ -107,6 +112,10 @@ class App extends Component {
           {this.showUserElseShowLoginButton()}
           </div>
         </nav>
+
+                    
+              {this.showLoginForm()}        
+                  
 
         <div>
           <Route path="/todolist" render={()=> <TodoList sendTheUser={this.getUserFromUserComponent} theActualUser={this.state.loggedInUser}/>} />
