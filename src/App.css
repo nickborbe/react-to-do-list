@@ -65,10 +65,11 @@ textarea{
   display: flex;
   justify-content: space-around;
   align-items: baseline;
+  padding: 25px;
 }
 
 #theBody{
-  height: 81vh;
+  min-height: 58vh;
 }
 
 #loginFormWrapper{
