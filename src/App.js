@@ -46,13 +46,19 @@ class App extends Component {
 
   }
 
-  showUser(){
+  showUserElseShowLoginButton(){
     if(this.state.loggedInUser){
       return(
         <div>
         <span> Welcome, {this.state.loggedInUser.username} </span>
        <button onClick={()=>{this.logout()}} className="little-green-btn"> Log Out </button>
 
+        </div>
+      )
+    }else {
+      return(
+        <div>
+                 <button onClick={()=>{this.showLoginForm()}} className="little-green-btn"> Log In/Sign Up </button>
         </div>
       )
     }
@@ -85,7 +91,7 @@ class App extends Component {
           <Link to="/todolist">To-Do List</Link>
           </div>
           <div>
-          {this.showUser()}
+          {this.showUserElseShowLoginButton()}
           </div>
         </nav>
 
@@ -112,7 +118,7 @@ class App extends Component {
 
       <ul>
         <h4> External Resources </h4>
-        <li> Check our the Docs </li>
+        <li> Check out the Docs </li>
       </ul>
           </div>
 
