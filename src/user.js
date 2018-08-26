@@ -40,6 +40,7 @@ class User extends Component {
         const password = this.state.passwordInput;
         axios.post(`http://localhost:5000/api/login`, {username, password }, {withCredentials: true})
         .then((response)=>{
+            this.props.toggle()
             this.setState({
                 usernameInput: '',
                 passwordInput: '',
@@ -54,6 +55,7 @@ class User extends Component {
         const password = this.state.passwordInput;
         axios.post(`http://localhost:5000/api/signup`, {username, password }, {withCredentials: true})
         .then((response)=>{
+            this.props.toggle()
             this.setState({
                 usernameInput: '',
                 passwordInput: '',

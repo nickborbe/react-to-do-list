@@ -23,7 +23,7 @@ class App extends Component {
 
 
   fetchUser(){
-    if( this.state.loggedInUser === null ){  
+    if( this.state.loggedInUser === null ){
         axios.get(`http://localhost:5000/api/loggedin`, {withCredentials: true})
         .then((response)=>{
             this.setState({
@@ -84,10 +84,9 @@ toggleLoginForm(){
 
   showLoginForm(){
     if(this.state.loginFormShowing){
-
       return(
         <div id = "loginFormWrapper">
-        <User theActualUser={this.state.loggedInUser} sendIt={this.getUserFromUserComponent}></User>
+        <User toggle={this.toggleLoginForm.bind(this)} theActualUser={this.state.loggedInUser} sendIt={this.getUserFromUserComponent}></User>
       </div>
     )
     
@@ -98,6 +97,7 @@ toggleLoginForm(){
 
 
   render() {
+    this.fetchUser()
     return (
     <div>
 
