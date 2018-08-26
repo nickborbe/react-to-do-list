@@ -80,9 +80,13 @@ class App extends Component {
       <div id="theBody">
 
         <nav>
+          <div>
           <Link to="/">Home</Link>
-          {this.showUser()}
           <Link to="/todolist">To-Do List</Link>
+          </div>
+          <div>
+          {this.showUser()}
+          </div>
         </nav>
 
         <div>

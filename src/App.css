@@ -37,11 +37,19 @@ body{
 nav{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 7vh;
   background-color: lightslategray;
   padding: 0 5vw;
 }
+
+nav div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
 
 
 .footer ul{
