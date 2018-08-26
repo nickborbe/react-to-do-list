@@ -44,17 +44,28 @@ textarea{
 
 }
 
+.App{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
 
 
 .list{
-  float: left;
-  margin-left: 80px;
+  margin: 0 80px;
+  width: 35%;
 }
 
 .add{
-  float: right;
   margin-right: 80px;
-  width: 40%;
+  width: 35%;
+}
+
+@media screen and (max-width: 800px) {
+  .list, .add {
+      width: 80%;
+      margin: 0 auto;
+  }
 }
 
 

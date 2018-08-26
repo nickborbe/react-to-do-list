@@ -105,19 +105,23 @@ class TodoList extends Component {
 
   render() {
     return (
+   <div>
+        <h1> The Single Greatest To-Do List In The History of Human History</h1>
       <div className="App">
-    <h1> The Single Greatest To-Do List In The History of Human History</h1>
-    
-    <div className="add">
-    <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
-    </div>
+        
+          <div className="list">
+          <h2> List of Tasks </h2>
+            {this.showTasks()}
+          </div>
 
-      <div className="list">
-      <h2> List of Tasks </h2>
-        {this.showTasks()}
+          
+        <div className="add">
+        <AddTask blah={()=>this.getAllTheTasks()}></AddTask>
+        </div>
+
+
+
       </div>
-
-
   </div>
     );
   }
