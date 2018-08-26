@@ -101,7 +101,11 @@ toggleLoginForm(){
     return (
     <div>
 
-      <div id="theBody">
+      <div onClick = {()=>{
+        if(this.state.loginFormShowing){
+          this.toggleLoginForm() 
+          }
+        }} id="theBody">
 
         <nav>
           <div>
