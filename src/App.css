@@ -1,4 +1,7 @@
 
+button{
+  border-radius: 5px;
+}
 .grn-btn{
   width: 300px;
   background-color: greenyellow;
