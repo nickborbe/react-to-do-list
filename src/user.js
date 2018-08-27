@@ -16,7 +16,6 @@ class User extends Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({...this.state, loggedInUser: nextProps["theActualUser"]})
-        console.log('re rendering to do list component', this.state)
       }
     
 
@@ -105,7 +104,7 @@ class User extends Component {
   
 
     showForm(){
-        if(!this.state.loggedInUser){
+        if(true){
             return (
             <div>
              <label> Username </label>

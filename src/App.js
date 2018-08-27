@@ -16,8 +16,6 @@ class App extends Component {
       loggedInUser: null,
       loginFormShowing: false,
     }
-    console.log('re rendering APP JS')
-    console.log(this.state)
 
   }
 
@@ -82,6 +80,8 @@ toggleLoginForm(){
   this.setState({...this.state, loginFormShowing: !this.state.loginFormShowing})
 }
 
+
+
   showLoginForm(){
     if(this.state.loginFormShowing){
       return(
@@ -101,8 +101,10 @@ toggleLoginForm(){
     return (
     <div>
 
-      <div onClick = {()=>{
-        if(this.state.loginFormShowing){
+         {/* <div id="theBody"> */}
+
+      <div onClick = {(e)=>{
+        if(this.state.loginFormShowing && e.target.tagName !== 'INPUT'){
           this.toggleLoginForm() 
           }
         }} id="theBody">
