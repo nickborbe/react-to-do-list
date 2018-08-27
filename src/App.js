@@ -101,13 +101,13 @@ toggleLoginForm(){
     return (
     <div>
 
-         {/* <div id="theBody"> */}
+         <div id="theBody">
 
-      <div onClick = {(e)=>{
+      {/* <div onClick = {(e)=>{
         if(this.state.loginFormShowing && e.target.tagName !== 'INPUT'){
           this.toggleLoginForm() 
           }
-        }} id="theBody">
+        }} id="theBody"> */}
 
         <nav>
           <div>
